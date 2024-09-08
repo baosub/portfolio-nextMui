@@ -14,7 +14,7 @@ import Container from '@mui/material/Container';
 import Fab from '@mui/material/Fab';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import Fade from '@mui/material/Fade';
-import Header from './headercomponents/Header'
+
 
 
 interface Props {
@@ -69,9 +69,11 @@ const page = (props: Props) => {
   const theme = useTheme(); // Accede al tema actual
 
   return (
-    <><Box>
-      <Toolbar id="back-to-top-anchor" />
-       <Header />
+    <>
+    
+    <Box id="back-to-top-anchor">
+      {/*<Toolbar  />     <Header />*/}
+    
 
 
     </Box>
