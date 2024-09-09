@@ -10,7 +10,8 @@ import Brightness7Icon from '@mui/icons-material/Brightness7';
 import { useThemeContext } from '../theme-context';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button'
-import { Height } from '@mui/icons-material';
+import Container from '@mui/material/Container'
+
 
 
 
@@ -21,16 +22,23 @@ const Navbar: React.FC = () => {
 
   return (
     <Box sx={{height:'100vh', display: 'flex', flexDirection: 'column' }}>
+      <Container maxWidth='xl'>
+        
+        
       <Box sx={{ display: "flex", justifyContent: "end" }} >
 
 
 
 
-        <IconButton color="inherit" onClick={toggleTheme} >
-          {themeMode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
-        </IconButton>
+<IconButton color="inherit" onClick={toggleTheme} >
+  {themeMode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+</IconButton>
 
-      </Box>
+</Box>
+        
+        
+         </Container>
+     
 
       <Box sx={{ height: '100vh', display: 'flex', alignItems: 'center', flexDirection: 'column', justifyContent: 'center' }}>
 
