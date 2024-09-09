@@ -9,7 +9,7 @@ const AtechStack = () => {
 
     <>
 
-    <Typography gutterBottom textAlign='center' variant='h4'>TECH STACK</Typography>
+    <Typography mb={10} gutterBottom textAlign='center' variant='h4'>TECH STACK</Typography>
 
 <Box
     sx={{
