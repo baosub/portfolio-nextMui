@@ -1,7 +1,8 @@
 // Importaciones necesarias
 import { Card, CardContent, CardMedia, Typography, Box } from '@mui/material';
 import Link from 'next/link';
-import { FC } from 'react';
+
+import Container from '@mui/material/Container'
 
 // Definimos la estructura del proyecto en TypeScript
 interface Project {
@@ -58,12 +59,12 @@ const Bprojects = () => {
     <Typography mb={10} mt={20} gutterBottom textAlign='center' variant='h4'>PROJECTS</Typography>
 
 
-    <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 5, justifyContent: 'center'}}>
+    <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 7, justifyContent: 'center'}}>
       {projects.map((project, index) => (
         <Link href={project.url} key={index} passHref legacyBehavior>
           <Card
             sx={{
-              maxWidth: 345,
+              maxWidth: {xs: '245px', md:'345px'},
               textDecoration: 'none', // Para quitar subrayado
               '&:hover': {
                 transform: 'scale(1.05)', // Añadir efecto hover
