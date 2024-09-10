@@ -8,9 +8,11 @@ const MainSection = () => {
   return (
     <>
 
-      <AtechStack />
+    <Container maxWidth='lg'><AtechStack />
       <Bprojects />
-      <CgithubProjects />
+      <CgithubProjects /></Container>
+
+      
 
     </>
   )

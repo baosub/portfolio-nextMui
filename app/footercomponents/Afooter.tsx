@@ -26,14 +26,14 @@ const Afooter = () => {
           Twitter
         </Link>{' '}
         or{' '}*/ }
-          <Link href="https://www.linkedin.com/in/ubaldo-barranco-osorio" target="_blank" rel="noopener" sx={{ color: 'gray' }}>
+          <Link href="https://www.linkedin.com/in/ubaldo-barranco-osorio" target="_blank" rel="noopener" sx={{ color: 'gray', textDecoration:'none' }}>
             LinkedIn
           </Link>
         </Typography>
 
         {/* Información de contacto, si decides agregarla */}
         <Typography variant="body2">
-          Contact: <Link href="mailto:barroso@gmail.com" sx={{ color: 'gray' }}>barroso@gmail.com</Link>
+          Contact: <Link  href="mailto:barroso@gmail.com" sx={{ color: 'gray', textDecoration:'none' }}>barroso@gmail.com</Link>
         </Typography>
       </Box>
 

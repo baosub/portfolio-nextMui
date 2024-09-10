@@ -49,24 +49,35 @@ const CgithubProjects = () => {
         <>
             <Typography mb={10} mt={20} gutterBottom textAlign='center' variant='h4'>GITHUB PROJECTS</Typography>
 
-            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 3, justifyContent: 'center' }}>
-                {repos.map((repo) => (
+            <Box
+      sx={{
+        overflowX: 'hidden', // Ocultar el overflow fuera de la pantalla
+        padding: '16px',
+        position: 'relative',
+      }}
+    >
+        <Box
+        sx={{
+          display: 'flex',
+          gap: '16px', // Espaciado entre las cards
+          overflowX: 'auto', // Permitir el scroll horizontal
+          scrollbarWidth: 'none', // Ocultar barra de scroll en Firefox
+          '&::-webkit-scrollbar': {
+            display: 'none', // Ocultar barra de scroll en Webkit
+          },
+        }}
+      >
+
+{repos.map((repo) => (
                     <Card
                         key={repo.name}
                         sx={{
-                            width: 300, // Ancho fijo para todas las tarjetas
-                            height: 200, // Alto fijo para todas las tarjetas
-                            textDecoration: 'none',
-
-                            border: '1px solid #333',
-                            display: 'flex', // Para alinear el contenido
-                            flexDirection: 'column', // El contenido se alinea en columna
-                            justifyContent: 'space-between', // Espacio entre el título y la descripción
-                            '&:hover': {
-                                transform: 'scale(1.05)',
-                                transition: 'transform 0.3s ease-in-out',
-                            },
-                        }}
+                            margin: '5px',                            flexShrink: 0, // Evita que las tarjetas se reduzcan al tamaño del contenedor
+                            flexGrow: 0,
+                            borderRadius: '12px', // Bordes redondeados para un diseño más limpio
+                            minWidth: { xs: '250px', sm: '300px', md: '350px' }, // Ancho mínimo adaptado a pantallas pequeñas
+                            maxWidth: '400px', // Ancho máximo para pantallas más grandes
+                          }}
                     >
                         <a
                             href={repo.html_url}
@@ -109,8 +120,26 @@ const CgithubProjects = () => {
                         </a>
                     </Card>
                 ))}
-            </Box>
 
+
+
+
+      </Box>
+
+
+
+
+
+
+    </Box>
+
+
+
+
+
+
+
+            
 
         </>
     )
