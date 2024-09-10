@@ -3,6 +3,8 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import { CustomThemeProvider } from "./theme-context";
 import { CssBaseline } from "@mui/material";
 
+import GoogleAnalytics from "./GoogleAnalytics";
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,16 +18,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+    <GoogleAnalytics/>
       <body>
-
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
           <CustomThemeProvider>
             <CssBaseline />
-
             {children}
           </CustomThemeProvider>
         </AppRouterCacheProvider>
-
       </body>
     </html>
   );
