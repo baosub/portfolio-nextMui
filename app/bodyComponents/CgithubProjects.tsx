@@ -3,7 +3,8 @@ import Typography from '@mui/material/Typography'
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Box, Card, CardContent } from '@mui/material';
-import Container from '@mui/material/Container'
+import IconButton from '@mui/material/IconButton'
+import StarIcon from '@mui/icons-material/Star';
 
 
 
@@ -56,16 +57,16 @@ const CgithubProjects = () => {
                             width: 300, // Ancho fijo para todas las tarjetas
                             height: 200, // Alto fijo para todas las tarjetas
                             textDecoration: 'none',
-                            
+
                             border: '1px solid #333',
                             display: 'flex', // Para alinear el contenido
                             flexDirection: 'column', // El contenido se alinea en columna
                             justifyContent: 'space-between', // Espacio entre el título y la descripción
                             '&:hover': {
-                              transform: 'scale(1.05)',
-                              transition: 'transform 0.3s ease-in-out',
+                                transform: 'scale(1.05)',
+                                transition: 'transform 0.3s ease-in-out',
                             },
-                          }}
+                        }}
                     >
                         <a
                             href={repo.html_url}
@@ -86,10 +87,25 @@ const CgithubProjects = () => {
                                 <Typography variant="body2" color="gray">
                                     {repo.description || 'No description'}
                                 </Typography>
-                                <Typography variant="body2" color="gold">
-                                    ⭐ {repo.stargazers_count} Stars
-                                </Typography>
+
                             </CardContent>
+
+                            <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', px: 2, pb: 2 }}>
+                                {/* Colocar otros elementos en esta área si los tienes */}
+
+                                {/* Estrella en la esquina inferior derecha */}
+                                <IconButton aria-label="star" disabled={!repo.stargazers_count}>
+                                    <StarIcon sx={{ color: repo.stargazers_count ? 'gold' : 'grey' }} />
+                                    {repo.stargazers_count > 0 && (
+                                        <Typography variant="body2" component="span" sx={{ ml: 1 }}>
+                                            {repo.stargazers_count}
+                                        </Typography>
+                                    )}
+                                </IconButton>
+                            </Box>
+
+
+
                         </a>
                     </Card>
                 ))}

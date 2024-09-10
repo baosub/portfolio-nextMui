@@ -6,6 +6,7 @@ import { Box, Button, Fab } from '@mui/material';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import Navbar from './components/NavBar';
 import MainSection from './bodyComponents/MainSection';
+import Mainfooter from './footercomponents/Mainfooter';
 
 
 
@@ -45,7 +46,7 @@ const page = () => {
 
       <Box><MainSection/></Box>
 
-      <Box>Footer</Box>
+      <Box><Mainfooter/></Box>
 
       {showScroll && (
         <Fab
