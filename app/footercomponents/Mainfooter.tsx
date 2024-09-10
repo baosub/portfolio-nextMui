@@ -4,8 +4,7 @@ import Afooter from './Afooter'
 const Mainfooter = () => {
   return (
     <>
-    <Afooter/>
-      
+      <Afooter />
     </>
   )
 }

@@ -10,41 +10,41 @@ const AtechStack = () => {
 
     <Container maxWidth='xl'>
 
-    <Typography mb={10} gutterBottom textAlign='center' variant='h4'>TECH STACK</Typography>
+      <Typography mb={10} gutterBottom textAlign='center' variant='h4'>TECH STACK</Typography>
 
-<Box
-    sx={{
-      display: 'flex',
-      flexWrap:'wrap',
-      justifyContent: 'center',
-      alignItems: 'center',
-      gap: 1, // Espacio entre los textos
-      padding: 1,
-      
-    }}
-  >
-    {['GIT', 'GITHUB', 'HTML', 'CSS', 'JAVASCRIPT', 'TYPESCRIPT', 'MATERIAL UI', 'NEXTJS'].map((tech) => (
-      <Typography
-      
-        key={tech}
-        variant="body2" // Tamaño del texto
+      <Box
         sx={{
-           // Negrita
-         
-          letterSpacing: 1, // Espacio entre letras para un toque minimalista
-          textAlign: 'center',
+          display: 'flex',
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+          alignItems: 'center',
+          gap: 1, // Espacio entre los textos
           padding: 1,
-         
-          borderRadius: '4px', // Bordes ligeramente redondeados
+
         }}
       >
-        {tech}
-      </Typography>
-    ))}
-  </Box>
-    
+        {['GIT', 'GITHUB', 'HTML', 'CSS', 'JAVASCRIPT', 'TYPESCRIPT', 'MATERIAL UI', 'NEXTJS'].map((tech) => (
+          <Typography
+
+            key={tech}
+            variant="body2" // Tamaño del texto
+            sx={{
+              // Negrita
+
+              letterSpacing: 1, // Espacio entre letras para un toque minimalista
+              textAlign: 'center',
+              padding: 1,
+
+              borderRadius: '4px', // Bordes ligeramente redondeados
+            }}
+          >
+            {tech}
+          </Typography>
+        ))}
+      </Box>
+
     </Container>
-    
+
   )
 }
 

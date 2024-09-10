@@ -21,73 +21,73 @@ const Navbar: React.FC = () => {
   const { toggleTheme, themeMode } = useThemeContext();
 
   return (
-    <Box sx={{height:'100vh', display: 'flex', flexDirection: 'column' }}>
+    <Box sx={{ height: '100vh', display: 'flex', flexDirection: 'column' }}>
       <Container maxWidth='xl'>
-        
-        
-      <Box sx={{ display: "flex", justifyContent: "end" }} >
+
+
+        <Box sx={{ display: "flex", justifyContent: "end" }} >
 
 
 
 
-<IconButton color="inherit" onClick={toggleTheme} >
-  {themeMode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
-</IconButton>
+          <IconButton color="inherit" onClick={toggleTheme} >
+            {themeMode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+          </IconButton>
 
-</Box>
-        
-        
-         </Container>
-     
+        </Box>
+
+
+      </Container>
+
 
       <Box sx={{ height: '100vh', display: 'flex', alignItems: 'center', flexDirection: 'column', justifyContent: 'center' }}>
 
-        
-          <Typography
-            variant="h2"
-            sx={{
-              fontWeight: 700,
-              fontFamily: 'Poppins, sans-serif',
 
-              letterSpacing: '0.05em',
+        <Typography
+          variant="h2"
+          sx={{
+            fontWeight: 700,
+            fontFamily: 'Poppins, sans-serif',
 
-            }}
-          >
-            Hey, this is
-          </Typography>
+            letterSpacing: '0.05em',
 
-          <Typography
-            variant="h1"
-            sx={{
-              fontWeight: 900,
-              fontFamily: 'Montserrat, sans-serif',
-              fontSize: '5rem', // Nombre más grande
+          }}
+        >
+          Hey, this is
+        </Typography>
 
-              letterSpacing: '0.08em',
+        <Typography
+          variant="h1"
+          sx={{
+            fontWeight: 900,
+            fontFamily: 'Montserrat, sans-serif',
+            fontSize: '5rem', // Nombre más grande
 
-            }}
-          >
-            Baub
-          </Typography>
+            letterSpacing: '0.08em',
 
-
-
-          <Typography
-            variant="h6"
-            sx={{
-              fontWeight: 400,
-              fontFamily: 'Playfair Display, sans-serif',
-
-              letterSpacing: '0.06em'
+          }}
+        >
+          Baub
+        </Typography>
 
 
-            }}
-          >
-            Front-End Developer
-          </Typography>
+
+        <Typography
+          variant="h6"
+          sx={{
+            fontWeight: 400,
+            fontFamily: 'Playfair Display, sans-serif',
+
+            letterSpacing: '0.06em'
 
 
-        
+          }}
+        >
+          Front-End Developer
+        </Typography>
+
+
+
 
 
 

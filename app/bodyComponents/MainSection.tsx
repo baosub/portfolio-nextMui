@@ -7,11 +7,11 @@ import CgithubProjects from './CgithubProjects'
 const MainSection = () => {
   return (
     <>
-    
-        <AtechStack/>
-        <Bprojects/>
-        <CgithubProjects/>
-      
+
+      <AtechStack />
+      <Bprojects />
+      <CgithubProjects />
+
     </>
   )
 }

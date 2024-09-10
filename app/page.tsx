@@ -35,33 +35,33 @@ const page = () => {
     return () => window.removeEventListener('scroll', checkScrollTop);
   }, [showScroll]);
 
- 
+
 
   return (
-    
-   
-    
-   <Box>
-      <Box><Navbar/></Box>
 
-      <Box><MainSection/></Box>
 
-      <Box><Mainfooter/></Box>
+
+    <Box>
+      <Box><Navbar /></Box>
+
+      <Box><MainSection /></Box>
+
+      <Box><Mainfooter /></Box>
 
       {showScroll && (
         <Fab
-          
+
           size="small"
           onClick={scrollToTop}
-          sx={{ position: 'fixed', bottom: 20, right: 20,  bgcolor: 'rgb(255, 255, 255)', color: 'rgb(0,0,0)' }}
+          sx={{ position: 'fixed', bottom: 20, right: 20, bgcolor: 'rgb(255, 255, 255)', color: 'rgb(0,0,0)' }}
         >
           <ArrowUpwardIcon />
         </Fab>
       )}
     </Box>
-   
-    
-  
+
+
+
   )
 }
 

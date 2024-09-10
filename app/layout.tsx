@@ -20,8 +20,8 @@ export default function RootLayout({
 
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
           <CustomThemeProvider>
-            <CssBaseline/>
-           
+            <CssBaseline />
+
             {children}
           </CustomThemeProvider>
         </AppRouterCacheProvider>
