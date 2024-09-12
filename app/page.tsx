@@ -15,7 +15,7 @@ import Mainfooter from './footercomponents/Mainfooter';
 
 
 
-const page = () => {
+const Page = () => {
   const [showScroll, setShowScroll] = useState(false);
 
   const checkScrollTop = () => {
@@ -33,7 +33,7 @@ const page = () => {
   useEffect(() => {
     window.addEventListener('scroll', checkScrollTop);
     return () => window.removeEventListener('scroll', checkScrollTop);
-  }, [showScroll]);
+  }, [showScroll, checkScrollTop]);
 
 
 
@@ -65,4 +65,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
