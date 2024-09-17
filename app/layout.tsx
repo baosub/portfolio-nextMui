@@ -7,7 +7,7 @@ import GoogleAnalytics from "./GoogleAnalytics";
 
 
 export const metadata: Metadata = {
-  title: "Portfolio Ubaldo",
+  title: "Ubaldo's portfolio",
   description: "This is Ubaldo's portfolio created with NextJs, MUI and typescript",
 };
 
