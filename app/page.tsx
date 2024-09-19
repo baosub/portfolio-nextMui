@@ -2,7 +2,7 @@
 
 
 import { useState, useEffect } from 'react';
-import { Box, Button, Fab } from '@mui/material';
+import { Box, Fab } from '@mui/material';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import Navbar from './components/NavBar';
 import MainSection from './bodyComponents/MainSection';
